@@ -1,0 +1,18 @@
+.pricing {
+    width: 75%;
+    margin: 0 auto 3rem;
+    background-color: $tertiaryBgColor;
+    box-shadow:0 0 1rem 0.3rem $tertiaryBgColorLight;
+    border-radius: 0.3rem;
+
+
+}
+.old-price {
+    span:first-child {
+        text-decoration: line-through;
+        margin-right: 0.5rem;
+    }
+}
+
+
+  

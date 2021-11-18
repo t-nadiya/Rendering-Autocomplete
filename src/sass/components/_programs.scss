@@ -1,0 +1,203 @@
+.programs {
+  > .programs-btns {
+    display: flex;
+    justify-content: space-between;
+
+    > .program-btn {
+      padding: 0.7rem;
+      background-color: transparent;
+      border: none;
+      font-size: 1.1rem;
+      color: $primaryTextColor;
+
+      &:hover, 
+      &.active {
+        color: $greenAccentColor;
+      }
+      
+    }
+  }  
+  a.menu-link {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+  
+    &::after {
+      position: absolute;
+      content: '';
+
+      height: 3px;
+      width: 100%;
+      background-color: $primaryTextColor;
+      bottom: 2px;
+      left: 0;
+    }
+
+    &:hover::after, &.active::after {
+      height: 7px;
+      bottom: 0;
+    }
+    &.active {
+      color: $greenAccentColor;        
+    }
+      &.active::after {
+        background-color: $greenAccentColor;
+      }
+
+      &:hover {
+        color: $greenAccentColor;
+      }
+      &:hover::after {
+        background-color: $greenAccentColor;
+      }
+  
+  }
+}
+ 
+.programs-text {
+  .program-text {
+    text-align: center;
+    padding: 2rem;
+    display: none;
+    font-size: 1rem;
+
+    &.active {
+      display: block;
+    }
+
+  }
+}
+  
+.week-content {
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  li {
+    padding: 0 20px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: $tertiaryBgColor;
+      border-radius: 50%;
+
+      &:hover, &.active {
+        background-color: $greenAccentColor;
+        color: $tertiaryBgColor;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.week-menu {
+  width: 75%;
+  margin: 0 auto;
+    &.active {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+}
+  
+.day-menu {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+  
+.menu {
+  background-color: $tertiaryBgColor;
+  box-shadow:0 0 1rem 0.3rem $tertiaryBgColorLight;
+  border-radius: 0.3rem;
+}
+ 
+.tbl-body-content {
+  width: 75%;
+}
+.dishes, .weight {
+  span {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+}
+.program-content {
+  margin-bottom: 40px;
+}
+
+
+@media (min-width: 576px) {
+  .programs {
+    >.programs-btns{
+      >.program-btn {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .programs-text {
+    .program-text {
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  .week-content {
+    li {
+      padding: 0 0.7rem;
+    }
+    .navbar {
+      .menu-link {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+}
+@media (min-width: 768px) {
+  .programs {
+    >.programs-btns{
+      >.program-btn {
+        font-size: 1rem;
+      }
+    }
+  }
+  .programs-text {
+    .program-text {
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  .week-content {
+    li {
+      padding: 0 1.2rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .programs {
+    >.programs-btns{
+      >.program-btn {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .programs-text {
+    .program-text {
+      padding: 2rem;
+      font-size: 1rem;
+    }
+  }
+  .week-content {
+    li {
+      padding: 0 1.5rem;
+    }
+  }
+}
+

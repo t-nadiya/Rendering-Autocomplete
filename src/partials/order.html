@@ -1,0 +1,82 @@
+<section class="order-screen">
+    <div class="container">
+        <form class="form">
+          <fieldset >           
+            <legend>Personal Info</legend>
+              <div class="input-wrap">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Your Name">
+              </div>
+              <div class="input-wrap">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" placeholder="+380-96-___-__-__">
+              </div>
+              <div class="input-wrap">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Your Email">
+              </div>
+              
+            </fieldset>
+            <fieldset>
+              <legend>Order Info</legend>
+              <div class="input-wrap">
+                <label for="">Delivery time</label>
+                <div>
+                    <label for="from">From:</label>
+                    <input type="time" id="from">
+                    <label for="to">to:</label>
+                    <input type="time" id="to">
+                  </div>
+              </div>
+              
+              <div class="input-wrap">
+                <label for="program">Program</label>
+                  <select id="program">
+                      <option value="Express">Express</option>
+                      <option value="Slim">Slim</option>
+                      <option value="Fitness">Fitness</option>
+                      <option value="Balance">Balance</option>
+                      <option value="Strong">Strong</option>
+                      <option value="Veggie">Veggie</option>
+                      <option value="Fish">Fish</option>
+                  </select>
+              </div>
+              <div class="input-wrap">
+                <label for="days">Amount of days</label>
+                <input type="range" id="days" min="0" max="30" value="0">
+                <span id="days-result">0(test day)</span>
+            </div>
+              <div class="input-wrap">
+                  <label for="c-yes">Disposable cutlery?</label>
+                  <div>
+                    <input type="checkbox" id="c-yes" value="yes">
+                    <label for="c-yes">Yes</label>
+                  </div>
+              </div>
+              <div class="input-wrap">
+                <label for="text">Delivery address and comments</label>
+                <textarea name="message" id="text" cols="40" rows="5" placeholder="Add your comment.."></textarea>
+              </div>
+          </fieldset>
+        </form>
+        <div class="order">
+            <button class="order-btn btn" data-modal-target="#modal">Заказать</button>
+        </div>
+        
+        <div class="modal" id="modal">
+          <div class="modal-header">
+              <div class="title">Your order</div>
+              <button data-close-button class="order-close-btn">&times;</button>
+          </div>
+          <div class="modal-details" id="modal-details"></div>
+        </div>
+
+        <div id="overlay"></div>
+    </div>
+
+    <div class="left-panel">
+      <div>
+        <span>Make an order</span>
+      </div>
+    </div>
+</section>

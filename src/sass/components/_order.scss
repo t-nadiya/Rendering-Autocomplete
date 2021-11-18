@@ -1,0 +1,96 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  fieldset:first-child {
+    margin-right: 1.5rem;
+  }
+}
+fieldset {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    legend {
+      font-size: 1.3rem;
+    }
+    .input-wrap {
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    input, select, textarea {
+        background-color: $primaryBgColor;
+        border: 1px solid $greenAccentColor;
+        box-shadow:0 0 1rem 0.3rem $tertiaryBgColorLight;
+        border-radius: 0.3rem;
+        color: $primaryTextColor;
+        width: 100%;
+        padding: 0.4rem;
+
+      &#from, &#to, &#c-yes, &#reset {
+        width: auto;
+      }
+    }
+}
+.order {
+  text-align: center;
+}
+.order-btn {
+  width: 20%;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  color: $primaryTextColor;
+  background-color: $greenAccentColor;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    transition: 200ms ease-in-out;
+    background-color: $tertiaryBgColor;
+    z-index: 10;
+    border-radius: 0.3rem;
+    width: 50%;
+  }
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1); 
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid $secondaryTextColor;
+  }
+  .modal-header .order-close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+  }
+  .modal-details {
+    padding: 1rem;
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $secondaryBgColor;
+    pointer-events: none;
+    
+  }
+#overlay.active {
+opacity: 1;
+pointer-events: all;
+}
